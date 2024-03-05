@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_clone/navigations/tabbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Center(child: Text("Hello World"),),
+      home: Tabbar(),
     );
   }
 }
