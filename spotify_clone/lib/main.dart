@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/navigations/tabbar.dart';
+import 'package:spotify_clone/utils/app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +17,18 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      themeMode: ThemeMode.dark,
+      darkTheme: ThemeData(
+        scaffoldBackgroundColor: apptheme.primaryColor,
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: apptheme.secondaryColor,
+          type: BottomNavigationBarType.fixed,
+          selectedLabelStyle: apptheme.BottomNavBarText,
+          unselectedLabelStyle: apptheme.BottomNavBarText,
+          selectedItemColor: apptheme.BottomNavIconsColor,
+          unselectedItemColor: apptheme.UnselectedColor,
+        )
+      ),
       home: Tabbar(),
     );
   }
