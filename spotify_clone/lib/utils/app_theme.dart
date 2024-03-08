@@ -15,6 +15,7 @@ abstract class AppTheme{
   final Color UnselectedColor;
 
   final TextStyle BottomNavBarText;
+  final TextStyle Heading1;
 
 
   AppTheme({
@@ -29,6 +30,7 @@ abstract class AppTheme{
    required this.UnselectedColor,
 
    required this.BottomNavBarText,
+   required this.Heading1,
   });
 }
 
@@ -45,5 +47,6 @@ class AppDefaultTheme extends AppTheme{
     BottomNavIconsColor: Colors.green.shade800,
     UnselectedColor: Colors.white54,
     BottomNavBarText: TextStyle(fontSize: 12),
+    Heading1: TextStyle(fontSize: 19, color: Colors.white, fontWeight: FontWeight.bold),
     );
 }
